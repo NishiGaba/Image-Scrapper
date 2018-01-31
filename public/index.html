@@ -11,8 +11,6 @@
 <div class="page">
   <section class="card register" ng-app="imageApp" ng-controller="imageController">
 
-     <gcse:search></gcse:search>
-
   <form name="myform" ng-submit="imageSearch()" novalidate>
 
     <div class="textintro">
@@ -20,11 +18,12 @@
       <p>Please enter the image name</p>
     </div>
 
-    <fieldset>
+    <gcse:search disableWebSearch="true" imageSearchResultSetSize="15"></gcse:search>
+   <!--  <fieldset>
       <input type="text" name="imageKey" placeholder="Image Name" ng-model="image.key" ng-required="true">
     </fieldset>
-
-    <button type="submit" class="btn">Search</button>
+ -->
+    <!-- <button type="submit" class="btn">Search</button> -->
 
   </form>
   <!-- /.myform -->
